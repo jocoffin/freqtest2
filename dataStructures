@@ -1,0 +1,24 @@
+# This firmware was mostly procedural C/C++ rather than OOP. I used structs to oranganize DDS state and arrays to manage 8 channels.
+  Didnt require  class hierachy.
+  
+  1. Arrays - fixed rather than a dynamic vector.
+    - store eight different frequencies
+    - sine LUT array - used precomputed sine values to generate waveforms to efficiently calculate outside of each iterations
+
+  2. Struct - public by default, where class is private by default.
+    - phase and step were contained in a struct to hold state of 1/8 DDS channels
+    - Array of Structures was used for each channel
+  
+  3. LUT
+    - LUT holds the index and value of 256 sine values
+    - optimizes speed by constraining memory
+
+
+# other data structures.
+    - map
+    - linked list
+    - stack
+    - queue
+    - tree
+    - graph
+    
